@@ -240,7 +240,6 @@ jobs:
           - rust
           - dotnet
           - java-tools
-          - gh
           - custom
         include:
           - PLATFORMS: linux/amd64,linux/arm64
