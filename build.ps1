@@ -81,7 +81,6 @@ ForEach($platform in $platforms.Split(",")) {
         "--build-arg=RUNNER=${runner}",
         "--build-arg=BUILD_DATE=$((Get-Date).ToString('u'))",
         "--build-arg=BUILD_OWNER=${owner}",
-        "--build-arg=BUILD_OWNER_MAIL=${owner}",
         "--build-arg=BUILD_REPO=${repository}",
         "--build-arg=BUILD_TAG=${build_tag}",
         "--build-arg=BUILD_TAG_VERSION=${build_tag_version}",
