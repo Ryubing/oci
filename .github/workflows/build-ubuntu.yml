@@ -51,7 +51,6 @@ jobs:
         TAG:
           - 24.04
           - 22.04
-          - 20.04
     steps:
       - name: Disable apparmor restrictions
         run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
@@ -234,7 +233,6 @@ jobs:
         TAG:
           - 24.04
           - 22.04
-          - 20.04
         TYPE:
           - go
           - js
@@ -246,24 +244,6 @@ jobs:
           - custom
         include:
           - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: go
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: js
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: pwsh
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: rust
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: dotnet
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: java-tools
-          - PLATFORMS: linux/amd64,linux/arm64,linux/arm/v7
-            TYPE: gh
-          - PLATFORMS: linux/amd64,linux/arm64
-            TYPE: custom
-        exclude:
-          - TAG: 20.04
-            TYPE: go
     steps:
       - name: Disable apparmor restrictions
         run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
