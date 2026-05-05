@@ -20,7 +20,6 @@ toolcache_arch() {
   case "$(uname -m)" in
     'aarch64') echo 'arm64' ;;
     'x86_64') echo 'x64' ;;
-    'armv7l') echo 'armv7l' ;;
     *) exit 1 ;;
   esac
 }
@@ -29,7 +28,6 @@ env_arch() {
   case "$(uname -m)" in
     'aarch64') echo 'ARM64' ;;
     'x86_64') echo 'X64' ;;
-    'armv7l') echo 'ARMV7L' ;;
     *) exit 1 ;;
   esac
 }

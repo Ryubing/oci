@@ -13,7 +13,6 @@ yq_arch() {
   case "$(uname -m)" in
     'aarch64') echo 'arm64' ;;
     'x86_64') echo 'amd64' ;;
-    'armv7l') echo 'arm' ;;
     *) exit 1 ;;
   esac
 }
