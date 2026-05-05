@@ -40,11 +40,13 @@
   - `ghcr.io/ryubing/ubuntu:js-24.04`
   - `ghcr.io/ryubing/ubuntu:js-26.04` (beta image)
   - `ghcr.io/ryubing/ubuntu:js-latest` (aka `js-24.04`)
+<!---
 - [`/linux/ubuntu/rust`](./linux/ubuntu/scripts/rust.sh) - `ghcr.io/ryubing/ubuntu:act-*` but with `rust` tools installed (`rustfmt`, `clippy`, `cbindgen`, etc.)
   - `ghcr.io/ryubing/ubuntu:rust-22.04`
   - `ghcr.io/ryubing/ubuntu:rust-24.04`
   - `ghcr.io/ryubing/ubuntu:rust-26.04` (beta image)
   - `ghcr.io/ryubing/ubuntu:rust-latest` (aka `act-24.04`)
+-->
 - [`/linux/ubuntu/pwsh`](./linux/ubuntu/scripts/pwsh.sh) - `ghcr.io/ryubing/ubuntu:act-*` but with `pwsh` tools and modules installed
   - `ghcr.io/ryubing/ubuntu:pwsh-22.04`
   - `ghcr.io/ryubing/ubuntu:pwsh-24.04`
