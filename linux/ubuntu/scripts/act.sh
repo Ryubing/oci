@@ -44,9 +44,11 @@ chown -R 1001:1000 /github
 
 printf "\n\t🐋 Installing packages 🐋\t\n"
 packages=(
+  appstream
   ssh
   gawk
   curl
+  desktop-file-utils
   jq
   wget
   sudo
@@ -54,14 +56,17 @@ packages=(
   ca-certificates
   software-properties-common
   apt-transport-https
+  libfuse2t64
   libyaml-0-2
   zstd
   zip
+  7zip
   unzip
   xz-utils
   python3-pip
   python3-venv
   pipx
+  zsync
 )
 
 apt-get -yq update
