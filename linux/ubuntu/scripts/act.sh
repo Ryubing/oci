@@ -107,6 +107,7 @@ mkdir -m 0700 -p ~/.ssh
 {
   ssh-keyscan github.com
   ssh-keyscan ssh.dev.azure.com
+  ssh-keyscan git.ryujinx.app
 } >>/etc/ssh/ssh_known_hosts
 
 printf "\n\t🐋 Installed base utils 🐋\t\n"
