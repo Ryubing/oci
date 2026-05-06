@@ -51,6 +51,7 @@ case "$(uname -m)" in
       go
       js
       pwsh
+      rust
       vcpkg
     )
     ;;
