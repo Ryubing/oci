@@ -16,10 +16,12 @@ A set of custom Ubuntu OCI images, primary for use with [Forgejo Actions](https:
     </tr>
 </table>
 
-This repository is a fork of [catthehacker/docker_images](https://github.com/catthehacker/docker_images); used to create the `ghcr.io/catthehacher/ubuntu` images.
+This is a fork of [catthehacker/docker_images](https://github.com/catthehacker/docker_images); used to create the `ghcr.io/catthehacher/ubuntu` images.<br/>
 We have been using these docker images for some time, and they work well. However, there's some tools we'd like to have in them pre-installed to save workflow time.
+
+
 Notable modifications from the original `catthehacker` Docker images are:
-- Inclusion of [`gli`](https://github.com/GreemDev/GLI), a tool used in the CI of Ryubing for determining version numbers from the Update Server.
+- Inclusion of [`gli`](https://github.com/GreemDev/GLI), a tool used in the CI of Ryubing for determining version numbers from the [Update Server](https://github.com/Ryubing/UpdateServer/).
 - Pre-installation of [AppImageTool](https://github.com/AppImage/appimagetool) and required dependencies:
   - `zsync`
   - `desktop-file-utils`
@@ -30,8 +32,8 @@ Notable modifications from the original `catthehacker` Docker images are:
 - Ubuntu 20.04 as well as 32-bit ARM images are not created.
 - We do not automatically create the `custom` or `rust` build flavors.
   - They (mostly Rust) take way too long to make, and we don't even use Rust in any project.
-- We do not automaticallt create the `gh` build flavor.
-  - These images are not meant for use via GitHub, so no need to have a build variant specific to its CLI.
+- We do not automatically create the `gh` build flavor.
+  - These images are not meant for use via GitHub, so no need to have a build variant specific to its CLI utility.
   - `gli` can replace the primary function for using `gh` in CI, [downloading releases matching a file pattern](https://github.com/GreemDev/GLI/blob/v3/src/Cli/Commands/GitHubReleaseCommand.cs).
 
 
@@ -45,7 +47,7 @@ Notable modifications from the original `catthehacker` Docker images are:
 > - Performance and/or disk space improvements 
 
 ## Images available
-- [`/linux/ubuntu/act`](./linux/ubuntu/scripts/act.sh) - image used in [nektos/act][https://github.com/nektos/act] as medium size image retaining compatibility with most actions while maintaining small size
+- [`/linux/ubuntu/act`](./linux/ubuntu/scripts/act.sh) - image used in [nektos/act](https://github.com/nektos/act) as medium size image retaining compatibility with most actions, with a small size
   - `ghcr.io/ryubing/ubuntu:act-22.04`
   - `ghcr.io/ryubing/ubuntu:act-24.04`
   - `ghcr.io/ryubing/ubuntu:act-latest` (aka `act-24.04`)
