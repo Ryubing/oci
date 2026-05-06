@@ -20,5 +20,6 @@ gli_arch() {
 base_url="https://github.com/GreemDev/GLI/releases/latest/download"
 filename="gli-linux-$(gli_arch)"
 download_with_retries "${base_url}/${filename}" "/tmp" "gli"
+chmod +x /tmp/gli
 # Install GLI
 sudo install /tmp/gli /usr/bin/gli
