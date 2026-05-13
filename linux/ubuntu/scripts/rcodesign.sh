@@ -9,7 +9,7 @@
 . /imagegeneration/installers/helpers/install.sh
 
 # Download apple-platform-rs release archive
-url=$(curl -s https://api.github.com/repos/indygreg/apple-platform-rs/releases/latest | jq -r ".assets[].browser_download_url|select(contains(\"unknown-linux-musl\") and contains(\"$(uname -m)\") and contains(\".tar.gz\"))")
+url=$(curl -s https://api.github.com/repos/indygreg/apple-platform-rs/releases/latest | jq -r ".assets[].browser_download_url|select(contains(\"unknown-linux-musl\") and contains(\"$(uname -m)\") and contains(\".tar.gz\") and (contains(\".sha256\") | not))")
 download_with_retries "$url" "/tmp" "apple-platform-rs.tar.gz"
 tar -xzvf /tmp/apple-platform-rs.tar.gz --wildcards '*/rcodesign' --strip-components=1
 # Install
