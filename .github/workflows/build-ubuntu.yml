@@ -60,6 +60,7 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version: '>=1.21.0'
+          cache: false
       - name: Setup buildah
         run: |
           sudo apt-get -y -qq update
@@ -253,6 +254,7 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version: '>=1.21.0'
+          cache: false
       - name: Setup buildah
         run: |
           sudo apt-get -y -qq update
